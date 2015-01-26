@@ -2,14 +2,14 @@
   <% unless @result[:ipinfo][:status_message] == "" %>
     Failed to retrieve IP Info: <%= @result[:ipinfo][:status_message] %>
   <% else %>
-    <table>
-      <tr><td><strong>IP Address:</strong></td><td><%= @result[:ipinfo][:ip] %></td></tr>
-      <tr><td><strong>City:</strong></td><td><%= @result[:ipinfo][:city].capitalize %></td></tr>
-      <tr><td><strong>Country:</strong></td><td><%= @result[:ipinfo][:country_name].capitalize %></td></tr>
-      <tr><td><strong>Country Code:</strong></td><td><%= @result[:ipinfo][:country_code] %></td></tr>
-      <tr><td><strong>Region:</strong></td><td><%= @result[:ipinfo][:region_name].capitalize %></td></tr>
-      <tr><td><strong>ZIP Code:</strong></td><td><%= @result[:ipinfo][:zip_code] %></td></tr>
-      <tr><td><strong>Coordinates:</strong></td><td>lon <%= @result[:ipinfo][:longitude] %> lat <%= @result[:ipinfo][:latitude] %></td></tr>
+    <table class="table-bordered table">
+      <tr><td align="right"><strong>IP Address:</strong></td><td><%= @result[:ipinfo][:ip] %></td></tr>
+      <tr><td align="right"><strong>City:</strong></td><td><%= @result[:ipinfo][:city].capitalize %></td></tr>
+      <tr><td align="right"><strong>Country:</strong></td><td><%= @result[:ipinfo][:country_name].capitalize %></td></tr>
+      <tr><td align="right"><strong>Country Code:</strong></td><td><%= @result[:ipinfo][:country_code] %></td></tr>
+      <tr><td align="right"><strong>Region:</strong></td><td><%= @result[:ipinfo][:region_name].capitalize %></td></tr>
+      <tr><td align="right"><strong>ZIP Code:</strong></td><td><%= @result[:ipinfo][:zip_code] %></td></tr>
+      <tr><td align="right"><strong>Coordinates:</strong></td><td>lon <%= @result[:ipinfo][:longitude] %> lat <%= @result[:ipinfo][:latitude] %></td></tr>
     </table>
   <% end %>
 <% end %>
